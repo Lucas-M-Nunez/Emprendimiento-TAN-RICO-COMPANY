@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <title>TAN RICO</title>
+  <link rel="icon" href="IMG-tanrico.jpg" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Oswald:wght@300&family=Sevillana&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="estilo.css" />
+  <script defer src="https://app.embed.im/snow.js"></script>
+</head>
+
+<body>
+
+  <div class="preloader">
+    <div class="spinner">
+      <div class="spinner">
+        <div class="spinner">
+          <div class="spinner"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <header>
+    <div class="logo">
+      <img src="../logotanrico-png.png" alt="Logo-TanRicoCompany" />
+      <h2 class="name-Company">TAN RICO</h2>
+    </div>
+
+    <button class="hamburguer">
+      <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+      </svg>
+    </button>
+    
+    <nav class="nav">
+      <ul class="list-nav">
+        <li><a href="../index.html" class="link-nav">
+          <span class="hover-underline-animation"> Inicio <img class="gorrito" src="../gorro-de-chef-.png" alt="gorrito"></span>
+        </a></li>
+        <li><a href="#main" class="link-nav">
+          <span class="hover-underline-animation"> Productos <img class="gorrito" src="../gorro-de-chef-.png" alt="gorrito"></span>
+        </a></li>
+        <li><a href="#contacto" class="link-nav">
+          <span class="hover-underline-animation"> Contacto <img class="gorrito" src="../gorro-de-chef-.png" alt="gorrito"></span>
+        </a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="container">
+
+      <div class="card">
+        <div class="face cara1">
+          <div class="content">
+            <i class="fab-cara1"></i>
+            <img class="img" src="67838.png" alt="Alfajores.jpg"></img>
+          </div>
+        </div>
+        <div class="face cara2">
+          <div class="content">
+            <p>
+              TARTAS<br>Y<br>TORTAS
+            </p>
+            <a href="Links-Secciones/tartasytortas.html" type="button">Ver Mas</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="face cara1">
+          <div class="content">
+            <i class="fab-cara1"></i>
+            <img class="img-alf" src="IMGProductos/alfa-dib-remove.png" alt="Alfajores"></img>
+          </div>
+        </div>
+        <div class="face cara2">
+          <div class="content">
+            <p>
+              ALFAJORES <br>Y<br> GALLETAS
+            </p>
+            <a href="Links-Secciones/galletasalfajores.html" type="button">Ver Mas</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="face cara1">
+          <div class="content">
+            <i class="fab-cara1"></i>
+            <img class="img" src="paness.jpg" alt=""></img>
+          </div>
+        </div>
+        <div class="face cara2">
+          <div class="content">
+            <p>
+              PANES
+            </p>
+            <a href="Links-Secciones/panes.html" type="button">Ver Mas</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <footer class="footer" id="contacto">
+    <div class="footer-Container">
+      <div class="footer-top">
+        <div class="companyInfo">
+          <h3 class="company-Logo">
+            <img class="logo-footer" src="IMG-tanrico.jpg" alt="logo">
+            TAN RICO
+          </h3>
+          <p class="company-descripcion">
+            Emprendimiento fundado con el fin de compartir momentos agradables junto a nuestros amigos o familiares, y
+            qué mejor forma de hacerlo, que con algo ¡TAN RICO!.
+          </p>
+          <span>Visitanos En Nuestras Redes</span>
+          <ul class="footer-list">
+            <li class="item-footerlist">
+              <a href="https://www.instagram.com/tanrico3/" class="footer-list-link" target="_blank">
+                <img src="inst.png" class="logo-footer"></img>
+              </a>
+            </li>
+            <li class="item-footerlist">
+              <a href="" class="footer-list-link">
+                <img src="wsp.png" class="logo-footer"></img>
+              </a>
+            </li>
+          </ul>
+          <span class="copyright"> Todos los Derechos Reservados <span class="fecha"></span> &copy TAN RICO Company.
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script src="/Main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Add smooth scrolling to all links
+      $("a").on('click', function (event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+  </script>
+</body>
+
+</html>

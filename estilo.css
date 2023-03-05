@@ -1,0 +1,1104 @@
+body {
+  font-family: sans-serif;
+  background-color: #ffbebe;
+  margin: 0;
+}
+
+.preloader {
+  width: 100%;
+  height: 100%;
+  background: #ffbebe;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+}
+
+.spinner {
+  width: 70px;
+  height: 70px;
+  border-top: 5px solid #fa58d0;
+  border-right: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  z-index: 10000;
+}
+
+.spinner > div {
+  box-sizing: border-box;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  justify-content: center;
+  margin: auto 40px;
+}
+
+/* HEADER STYLE */
+
+.name-Company {
+  font-family: "Oswald", sans-serif;
+  font-size: 40px;
+  display: none;
+}
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  height: auto;
+  background-color: #f2f2f2;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.hamburguer {
+  display: block;
+  width: 60px;
+  height: 50px;
+  cursor: pointer;
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+.svg {
+  width: 40px;
+  height: 40px;
+  color: #ffffff;
+}
+
+.list-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+li {
+  margin: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 150px;
+}
+
+.nav {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 0;
+  pointer-events: none;
+  overflow: hidden;
+  transition: all 0.5s ease;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav.Activo {
+  height: 30vh;
+  pointer-events: auto;
+}
+
+.link-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.link-nav span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.link-nav:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* SUBMENU PRODUCTOS */
+
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu__link {
+  display: block;
+  padding: 20px;
+  color: #151823;
+  font-size: 1em;
+}
+
+.submenu {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.submenu .menu__link {
+  background: #666873;
+}
+
+/* CARD: estilizacion */
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container .card {
+  position: relative;
+}
+
+.container .card .face {
+  width: 300px;
+  height: 200px;
+  transition: 0.4s;
+}
+
+.container .card .face.cara1 {
+  position: relative;
+  background: #fbeff8;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+
+.container .card:hover .face.cara1 {
+  transform: translateY(0);
+  box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff,
+    0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+}
+
+.container .card .face.cara1 .content {
+  /* opacity: 0.2; */
+  transition: 0.5s;
+  text-align: center;
+}
+
+.container .card:hover .face.cara1 .content {
+  opacity: 1;
+}
+
+.container .card .face.cara1 .content i {
+  font-size: 3em;
+  color: white;
+  display: inline-block;
+}
+
+.container .card .face.cara1 .content .img {
+  width: auto;
+  height: 200px;
+}
+
+.container .card .face.cara1 .content .img-alf {
+  width: auto;
+  height: 300px;
+}
+
+.container .card .face.cara1 .content h3 {
+  font-size: 1em;
+  color: rgb(15, 14, 14);
+  text-align: center;
+}
+
+.container .card .face.cara1 .content a {
+  transition: 0.5s;
+}
+
+.container .card .face.cara2 {
+  position: relative;
+  background: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transform: translateY(-100px);
+}
+
+.container .card:hover .face.cara2 {
+  transform: translateY(0);
+}
+
+.container .card .face.cara2 .content p,
+a {
+  font-size: 10pt;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  text-align: center;
+}
+
+.container .card:hover .face.cara2 {
+  transform: translateY(0);
+}
+
+.container .card .face.cara2 .content a {
+  text-decoration: none;
+  color: black;
+  box-sizing: border-box;
+  outline: 1px dashed #333;
+  padding: 10px;
+  margin: 15px 0 0;
+  display: inline-block;
+}
+
+.container .card .face.cara2 .content a:hover {
+  background: #333;
+  color: whitesmoke;
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* FOOTER */
+
+.footer {
+  padding-block: 5rem;
+  background-color: #151823;
+  color: #666873;
+}
+
+.footer-Container {
+  max-width: 116rem;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  row-gap: 2rem;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.item-footerlist {
+  list-style: none;
+}
+
+.footer-list-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.25s;
+}
+
+.footer-list-link:hover {
+  color: #fff;
+}
+
+.companyInfo {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-right: 5rem;
+}
+
+.company-Logo {
+  display: flex;
+  color: #fff;
+  align-items: center;
+}
+
+.logo-footer {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-right: 10px;
+}
+
+.companyInfo ul {
+  flex-direction: row;
+}
+
+.copyright {
+  margin-top: auto;
+}
+
+.gorrito {
+  width: 15px;
+  height: 20px;
+}
+
+@media screen and (min-width: 431px) {
+  body {
+    font-family: sans-serif;
+    background-color: #ffbebe;
+    margin: 0;
+  }
+
+  .preloader {
+    width: 100%;
+    height: 100%;
+    background: #ffbebe;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+  }
+
+  .spinner {
+    width: 70px;
+    height: 70px;
+    border-top: 5px solid #fa58d0;
+    border-right: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10000;
+  }
+
+  .spinner > div {
+    box-sizing: border-box;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  main {
+    justify-content: center;
+    margin: auto 40px;
+  }
+
+  .name-Company {
+    font-family: "Oswald", sans-serif;
+    font-size: 40px;
+    display: none;
+  }
+
+  header {
+    display: flex;
+    flex-flow: row wrap;
+    height: auto;
+    background-color: #f2f2f2;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .hamburguer {
+    display: block;
+    width: 60px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #000000;
+    border-radius: 10px;
+  }
+
+  .svg {
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 150px;
+  }
+
+  .nav {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 0;
+    pointer-events: none;
+    overflow: hidden;
+    transition: all 0.5s ease;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav.Activo {
+    height: 30vh;
+    pointer-events: auto;
+  }
+
+  .list-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+
+  li {
+    margin: 1rem 0;
+  }
+
+  .link-nav {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .link-nav span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+  }
+
+  .hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+  }
+
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .link-nav:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  /* MAIN CON LAS CARTAS */
+
+  .container {
+    margin-top: 30px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+    gap: 50px;
+  }
+
+  .container .card {
+    position: relative;
+  }
+
+  .container .card .face {
+    width: 300px;
+    height: 200px;
+    transition: 0.4s;
+  }
+
+  .container .card .face.cara1 {
+    position: relative;
+    background: #fbeff8;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+  }
+
+  .container .card:hover .face.cara1 {
+    transform: translateY(0);
+    box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px #f0f,
+      inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff,
+      0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+  }
+
+  .container .card .face.cara1 .content {
+    /* opacity: 0.2; */
+    transition: 0.5s;
+    text-align: center;
+  }
+
+  .container .card:hover .face.cara1 .content {
+    opacity: 1;
+  }
+
+  .container .card .face.cara1 .content i {
+    font-size: 3em;
+    color: white;
+    display: inline-block;
+  }
+
+  .container .card .face.cara1 .content .img {
+    width: auto;
+    height: 200px;
+  }
+
+  .container .card .face.cara1 .content .img-alf {
+    width: auto;
+    height: 300px;
+  }
+
+  .container .card .face.cara1 .content h3 {
+    font-size: 1em;
+    color: rgb(10, 10, 10);
+    text-align: center;
+  }
+
+  .container .card .face.cara1 .content a {
+    transition: 0.5s;
+  }
+
+  .container .card .face.cara2 {
+    position: relative;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+  }
+
+  .container .card:hover .face.cara2 {
+    transform: translateY(0);
+  }
+
+  .container .card .face.cara2 .content p,
+  a {
+    font-size: 10pt;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+  }
+
+  .container .card:hover .face.cara2 {
+    transform: translateY(0);
+  }
+
+  .container .card .face.cara2 .content a {
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+    outline: 1px dashed #333;
+    padding: 10px;
+    margin: 15px 0 0;
+    display: inline-block;
+  }
+
+  .container .card .face.cara2 .content a:hover {
+    background: #333;
+    color: whitesmoke;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  /* FOOTER para Screen 431px hasta 600px */
+
+  .footer {
+    padding-block: 5rem;
+    background-color: #151823;
+    color: #666873;
+    margin-top: 30px;
+  }
+
+  .footer-Container {
+    max-width: 116rem;
+    margin: auto;
+    padding: 0 1.5rem;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    row-gap: 2rem;
+  }
+
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .item-footerlist {
+    list-style: none;
+  }
+
+  .footer-list-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.25s;
+  }
+
+  .footer-list-link:hover {
+    color: #fff;
+  }
+
+  .companyInfo {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-right: 5rem;
+  }
+
+  .company-Logo {
+    display: flex;
+    color: #fff;
+    align-items: center;
+  }
+
+  .logo-footer {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-right: 10px;
+  }
+
+  .companyInfo ul {
+    flex-direction: row;
+  }
+
+  .copyright {
+    margin-top: auto;
+  }
+
+  .gorrito {
+    width: 15px;
+    height: 20px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    font-family: sans-serif;
+    background-color: #ffbebe;
+    margin: 0;
+  }
+
+  .preloader {
+    width: 100%;
+    height: 100%;
+    background: #ffbebe;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+  }
+
+  .spinner {
+    width: 70px;
+    height: 70px;
+    border-top: 5px solid #fa58d0;
+    border-right: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10000;
+  }
+
+  .spinner > div {
+    box-sizing: border-box;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  main {
+    justify-content: center;
+    margin: auto 40px;
+  }
+
+  .name-Company {
+    font-family: "Oswald", sans-serif;
+    font-size: 50px;
+    display: block;
+    background: linear-gradient(270deg, #d8d8d8, #1c1c1c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    background-color: #f2f2f2;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+  }
+
+  header .hamburguer {
+    display: none;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 150px;
+    padding-left: 30px;
+  }
+
+  .list-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+  }
+
+  li {
+    margin-right: 10px;
+  }
+
+  .nav {
+    display: flex;
+    place-items: center;
+    padding-right: 30px;
+    width: auto;
+    overflow: inherit;
+    pointer-events: auto;
+  }
+
+  .link-nav {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .link-nav span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+  }
+
+  .hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+  }
+
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .link-nav:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  /* CARD: estilizacion */
+
+  .container {
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px auto;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  }
+
+  .container .card {
+    position: relative;
+  }
+
+  .container .card .face {
+    width: 300px;
+    height: 200px;
+    transition: 0.4s;
+  }
+
+  .container .card .face.cara1 {
+    position: relative;
+    background: #fbeff8;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+  }
+
+  .container .card:hover .face.cara1 {
+    transform: translateY(0);
+    box-shadow: inset 0 0 60px whitesmoke, inset 20px 0 80px #f0f,
+      inset -20px 0 80px #0ff, inset 20px 0 300px #f0f, inset -20px 0 300px #0ff,
+      0 0 50px #fff, -10px 0 80px #f0f, 10px 0 80px #0ff;
+  }
+
+  .container .card .face.cara1 .content {
+    /* opacity: 0.2; */
+    transition: 0.5s;
+    text-align: center;
+  }
+
+  .container .card:hover .face.cara1 .content {
+    opacity: 1;
+  }
+
+  .container .card .face.cara1 .content i {
+    font-size: 3em;
+    color: white;
+    display: inline-block;
+  }
+
+  .container .card .face.cara1 .content .img {
+    width: auto;
+    height: 200px;
+  }
+
+  .container .card .face.cara1 .content .img-alf {
+    width: auto;
+    height: 300px;
+  }
+
+  .container .card .face.cara1 .content h3 {
+    font-size: 1em;
+    color: rgb(10, 10, 10);
+    text-align: center;
+  }
+
+  .container .card .face.cara1 .content a {
+    transition: 0.5s;
+  }
+
+  .container .card .face.cara2 {
+    position: relative;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+    transform: translateY(-100px);
+  }
+
+  .container .card:hover .face.cara2 {
+    transform: translateY(0);
+  }
+
+  .container .card .face.cara2 .content p,
+  a {
+    font-size: 10pt;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    text-align: center;
+  }
+
+  .container .card:hover .face.cara2 {
+    transform: translateY(0);
+  }
+
+  .container .card .face.cara2 .content a {
+    text-decoration: none;
+    color: black;
+    box-sizing: border-box;
+    outline: 1px dashed #333;
+    padding: 10px;
+    margin: 15px 0 0;
+    display: inline-block;
+  }
+
+  .container .card .face.cara2 .content a:hover {
+    background: #333;
+    color: whitesmoke;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  /* FOOTER */
+
+  .footer {
+    margin-top: 30px;
+    padding-block: 5rem;
+    background-color: #151823;
+    color: #666873;
+    padding: 0;
+  }
+
+  .footer-Container {
+    max-width: 116rem;
+    margin: auto;
+    padding: 0 1.5rem;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    row-gap: 2rem;
+  }
+
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .item-footerlist {
+    list-style: none;
+  }
+
+  .footer-list-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.25s;
+  }
+
+  .footer-list-link:hover {
+    color: #fff;
+  }
+
+  .companyInfo {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-right: 5rem;
+  }
+
+  .company-Logo {
+    display: flex;
+    color: #fff;
+    align-items: center;
+  }
+
+  .logo-footer {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-right: 10px;
+    transition: all 0.8s;
+  }
+
+  .logo-footer:hover {
+    transform: scale(1.4);
+  }
+
+  .companyInfo ul {
+    flex-direction: row;
+  }
+
+  .copyright {
+    margin-top: auto;
+  }
+
+  .gorrito {
+    width: 15px;
+    height: 20px;
+  }
+}

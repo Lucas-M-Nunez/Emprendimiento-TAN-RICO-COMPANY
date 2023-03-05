@@ -1,0 +1,1035 @@
+body {
+  font-family: sans-serif;
+  background-color: #ffbebe;
+  margin: 0;
+}
+
+.preloader {
+  width: 100%;
+  height: 100%;
+  background: #ffbebe;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10000;
+}
+
+.spinner {
+  width: 70px;
+  height: 70px;
+  border-top: 5px solid #fa58d0;
+  border-right: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  z-index: 10000;
+}
+
+.spinner > div {
+  box-sizing: border-box;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  justify-content: center;
+  margin: auto 40px;
+}
+
+/* HEADER STYLE */
+
+.name-Company {
+  font-family: "Oswald", sans-serif;
+  font-size: 40px;
+  display: none;
+}
+
+header {
+  display: flex;
+  flex-flow: row wrap;
+  height: auto;
+  background-color: #f2f2f2;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.hamburguer {
+  display: block;
+  width: 60px;
+  height: 50px;
+  cursor: pointer;
+  background-color: #000000;
+  border-radius: 10px;
+}
+
+.svg {
+  width: 40px;
+  height: 40px;
+  color: #ffffff;
+}
+
+.list-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+li {
+  margin: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 150px;
+}
+
+.nav {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 0;
+  pointer-events: none;
+  overflow: hidden;
+  transition: all 0.5s ease;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav.Activo {
+  height: 30vh;
+  pointer-events: auto;
+}
+
+.link-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.link-nav span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.link-nav:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* SUBMENU PRODUCTOS */
+
+.submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu__link {
+  display: block;
+  background: rgb(255, 198, 198);
+  padding: 20px;
+  font-size: 1em;
+  font-family: 'Fredoka One', cursive;
+}
+.menu__item {
+  font-size: 20px;
+}
+
+.submenu {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.submenu .menu__link:hover {
+  background: #fd8bc6;
+}
+
+/* titulo  */
+
+.titulo {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  display: block;
+  background: linear-gradient(270deg, #404040, #f16e6e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container2 {
+  margin-top: 30px;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* CARD: estilizacion */
+
+.container {
+  margin-top: 30px;
+  background-color: #f2f2f2;
+  border-radius: 20px;
+  padding: 10px;
+  gap: 30px;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.container .card2 {
+  background-color: #fff;
+  width: 270px;
+  overflow: hidden;
+  text-align: center;
+  border: 2px solid #000000;
+  border-radius: 15px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
+}
+
+.container .card2 .images-product {
+  width: 240px;
+  margin: 20px auto;
+}
+
+.container .card2 .images-product .img-card2 {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
+  transition: 0.5s;
+}
+
+.container .card2 .images-product img:hover {
+  transform: scale(1.1);
+}
+
+.container .card2 .info-card h4 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  padding: 0 25px;
+  margin-bottom: 10px;
+}
+
+.container .card2 .section-addtocard {
+  width: 100%;
+}
+
+.container .card2 .info-card .p-info {
+  width: auto;
+  padding: 10px;
+}
+
+/* Button- CART style */
+
+#add {
+  cursor: pointer;
+  width: 100%;
+  font-weight: 700;
+  font-family: Helvetica,"sans-serif";
+  transition: all .2s;
+  padding: 10px 20px;
+  background: #ffbebe;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  justify-content: center;
+}
+
+#add:hover {
+  background: #fa58d0;
+}
+
+#add > .cart {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform .3s ease-in-out;
+}
+
+#add:hover .cart {
+  transform: translateX(5px);
+}
+
+#add:active {
+  transform: scale(0.95);
+}
+
+/* FOOTER */
+
+.footer {
+  padding-block: 5rem;
+  background-color: #151823;
+  color: #666873;
+  margin-top: 30px;
+}
+
+.footer-Container {
+  max-width: 116rem;
+  margin: auto;
+  padding: 0 1.5rem;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  row-gap: 2rem;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.item-footerlist {
+  list-style: none;
+}
+
+.footer-list-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.25s;
+}
+.footer-list-link:hover {
+  color: #fff;
+}
+.companyInfo {
+  grid-column: 1/-1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-right: 5rem;
+}
+.company-Logo {
+  display: flex;
+  color: #fff;
+  align-items: center;
+}
+
+.logo-footer {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  margin-right: 10px;
+}
+
+.companyInfo ul {
+  flex-direction: row;
+}
+.copyright {
+  margin-top: auto;
+}
+.gorrito {
+  width: 15px;
+  height: 20px;
+}
+
+@media screen and (min-width: 431px) {
+  body {
+    font-family: sans-serif;
+    background-color: #ffbebe;
+    margin: 0;
+  }
+
+  .preloader {
+    width: 100%;
+    height: 100%;
+    background: #ffbebe;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+  }
+
+  .spinner {
+    width: 70px;
+    height: 70px;
+    border-top: 5px solid #fa58d0;
+    border-right: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10000;
+  }
+
+  .spinner > div {
+    box-sizing: border-box;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  main {
+    justify-content: center;
+    margin: auto 40px;
+  }
+
+  .name-Company {
+    font-family: "Oswald", sans-serif;
+    font-size: 40px;
+    display: none;
+  }
+
+  header {
+    display: flex;
+    flex-flow: row wrap;
+    height: auto;
+    background-color: #f2f2f2;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .hamburguer {
+    display: block;
+    width: 60px;
+    height: 50px;
+    cursor: pointer;
+    background-color: #000000;
+    border-radius: 10px;
+  }
+
+  .svg {
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 150px;
+  }
+
+  .nav {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 0;
+    pointer-events: none;
+    overflow: hidden;
+    transition: all 0.5s ease;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav.Activo {
+    height: 30vh;
+    pointer-events: auto;
+  }
+
+  .list-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+
+  li {
+    margin: 1rem 0;
+  }
+
+  .link-nav {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .link-nav span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+  }
+
+  .hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+  }
+
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .link-nav:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  /* Titulo */
+
+  .titulo {
+    font-family: "Oswald", sans-serif;
+    font-size: 30px;
+    display: block;
+    background: linear-gradient(270deg, #404040, #f16e6e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .container2 {
+    margin-top: 200px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #f2f2f2;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  }
+
+  /* MAIN CON LAS CARTAS */
+
+  .container {
+    margin-top: 30px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding: 40px;
+    gap: 30px;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  }
+
+  /* OPTION CARD 2 ==> */
+
+  .container .card2 {
+    background-color: #fff;
+
+    width: 270px;
+    overflow: hidden;
+    text-align: center;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
+  }
+
+  .container .card2 .images-product {
+    width: 240px;
+    margin: 20px auto;
+  }
+
+  .container .card2 .images-product .img-card2 {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
+    transition: 0.5s;
+  }
+
+  .container .card2 .images-product img:hover {
+    transform: scale(1.1);
+  }
+
+  .container .card2 .info-card h4 {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 18px;
+    padding: 0 25px;
+    margin-bottom: 10px;
+  }
+
+  .container .card2 .section-addtocard {
+    width: 100%;
+  }
+
+  .container .card2 .info-card .p-info {
+    width: 250px;
+    padding: 10px;
+  }
+
+  /* FOOTER */
+
+  .footer {
+    padding-block: 5rem;
+    background-color: #151823;
+    color: #666873;
+    margin-top: 30px;
+  }
+
+  .footer-Container {
+    max-width: 116rem;
+    margin: auto;
+    padding: 0 1.5rem;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    row-gap: 2rem;
+  }
+
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .item-footerlist {
+    list-style: none;
+  }
+
+  .footer-list-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.25s;
+  }
+  .footer-list-link:hover {
+    color: #fff;
+  }
+  .companyInfo {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-right: 5rem;
+  }
+  .company-Logo {
+    display: flex;
+    color: #fff;
+    align-items: center;
+  }
+
+  .logo-footer {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-right: 10px;
+  }
+
+  .companyInfo ul {
+    flex-direction: row;
+  }
+  .copyright {
+    margin-top: auto;
+  }
+  .gorrito {
+    width: 15px;
+    height: 20px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    font-family: sans-serif;
+    background-color: #ffbebe;
+    margin: 0;
+  }
+
+  .preloader {
+    width: 100%;
+    height: 100%;
+    background: #ffbebe;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+  }
+
+  .spinner {
+    width: 70px;
+    height: 70px;
+    border-top: 5px solid #fa58d0;
+    border-right: 5px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 10000;
+  }
+
+  .spinner > div {
+    box-sizing: border-box;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  a {
+    text-decoration: none;
+  }
+  main {
+    justify-content: center;
+    margin: auto 40px;
+  }
+
+  .name-Company {
+    font-family: "Oswald", sans-serif;
+    font-size: 50px;
+    display: block;
+    background: linear-gradient(270deg, #d8d8d8, #1c1c1c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    background-color: #f2f2f2;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+
+  header .hamburguer {
+    display: none;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo img {
+    height: 150px;
+    padding-left: 30px;
+  }
+
+  .list-nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+  }
+
+  li {
+    margin-right: 10px;
+  }
+
+  .nav {
+    display: flex;
+    place-items: center;
+    padding-right: 30px;
+    width: auto;
+    overflow: inherit;
+    pointer-events: auto;
+  }
+
+  .link-nav {
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+
+  .link-nav span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+  }
+
+  .hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+  }
+
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  .link-nav:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  /* SUBMENU PRODUCTOS */
+
+  .submenu .menu__link {
+    background: rgb(255, 198, 198);
+  }
+  .menu__item {
+    list-style: none;
+    margin: 0;
+  }
+
+  .menu__link {
+    display: block;
+    padding: 20px;
+    color: #848484;
+    font-size: 1em;
+  }
+
+  .container-submenu {
+    position: relative;
+  }
+
+  .submenu {
+    margin-top: 10px;
+    position: absolute;
+    width: 200px;
+    overflow: visible;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .container-submenu:hover .submenu {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* TITULO  */
+
+  .titulo {
+    font-family: "Oswald", sans-serif;
+    font-size: 50px;
+    display: block;
+    background: linear-gradient(270deg, #404040, #f16e6e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* CARD: estilizacion    OPTION CARD 2 ==>  */
+
+  .container {
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    padding: 40px;
+    gap: 30px;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  }
+
+  /* OPTION CARD 2 ==> */
+
+  .container .card2 {
+    background-color: #fff;
+
+    width: 270px;
+    overflow: hidden;
+    text-align: center;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
+  }
+
+  .container .card2 .images-product {
+    width: 240px;
+    margin: 20px auto;
+  }
+
+  .container .card2 .images-product .img-card2 {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
+    transition: 0.5s;
+  }
+
+  .container .card2 .images-product img:hover {
+    transform: scale(1.1);
+  }
+
+  .container .card2 .info-card h4 {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 18px;
+    padding: 0 25px;
+    margin-bottom: 10px;
+  }
+
+  .container .card2 .section-addtocard {
+    width: 100%;
+  }
+
+  .container .card2 .info-card .p-info {
+    width: 250px;
+    padding: 10px;
+  }
+
+  /* FOOTER */
+
+  .footer {
+    margin-top: 20px;
+    padding-block: 5rem;
+    background-color: #151823;
+    color: #666873;
+    padding: 10px 0;
+  }
+
+  .footer-Container {
+    max-width: 116rem;
+    margin: auto;
+    padding: 0 1.5rem;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    row-gap: 2rem;
+  }
+
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .item-footerlist {
+    list-style: none;
+  }
+
+  .footer-list-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.25s;
+  }
+  .footer-list-link:hover {
+    color: #fff;
+  }
+  .companyInfo {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-right: 5rem;
+  }
+  .company-Logo {
+    display: flex;
+    color: #fff;
+    align-items: center;
+  }
+
+  .logo-footer {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    margin-right: 10px;
+    transition: all 0.8s;
+  }
+
+  .logo-footer:hover {
+    transform: scale(1.4);
+  }
+
+  .companyInfo ul {
+    flex-direction: row;
+  }
+  .copyright {
+    margin-top: auto;
+  }
+
+  .gorrito {
+    width: 15px;
+    height: 20px;
+  }
+}
